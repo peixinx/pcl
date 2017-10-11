@@ -6,14 +6,20 @@
 
 #IncludeRegexTransform: 
 
-/home/xpx/Documents/pcl_test/cloud_viewer.cpp
-pcl/visualization/cloud_viewer.h
--
+/home/xpx/Documents/pcl_project/pcl_test/cloud_viewer.cpp
 iostream
 -
-pcl/io/io.h
--
 pcl/io/pcd_io.h
+-
+pcl/io/ply_io.h
+-
+pcl/point_cloud.h
+-
+pcl/console/parse.h
+-
+pcl/common/transforms.h
+-
+pcl/visualization/pcl_visualizer.h
 -
 
 /usr/include/eigen3/Eigen/Cholesky
@@ -1700,6 +1706,30 @@ boost/shared_ptr.hpp
 pcl/pcl_macros.h
 -
 
+/usr/local/include/pcl-1.8/pcl/cloud_iterator.h
+pcl/point_cloud.h
+-
+pcl/PointIndices.h
+-
+pcl/correspondence.h
+-
+pcl/impl/cloud_iterator.hpp
+-
+
+/usr/local/include/pcl-1.8/pcl/common/centroid.h
+pcl/point_cloud.h
+-
+pcl/point_traits.h
+-
+pcl/PointIndices.h
+-
+pcl/cloud_iterator.h
+-
+pcl/common/impl/accumulators.hpp
+-
+pcl/common/impl/centroid.hpp
+-
+
 /usr/local/include/pcl-1.8/pcl/common/colors.h
 pcl/pcl_macros.h
 -
@@ -1736,6 +1766,28 @@ Eigen/Eigenvalues
 pcl/common/impl/eigen.hpp
 -
 
+/usr/local/include/pcl-1.8/pcl/common/impl/accumulators.hpp
+map
+-
+boost/mpl/filter_view.hpp
+-
+boost/fusion/include/mpl.hpp
+-
+boost/fusion/include/for_each.hpp
+-
+boost/fusion/include/as_vector.hpp
+-
+pcl/point_types.h
+-
+
+/usr/local/include/pcl-1.8/pcl/common/impl/centroid.hpp
+pcl/common/centroid.h
+-
+pcl/conversions.h
+-
+boost/mpl/size.hpp
+-
+
 /usr/local/include/pcl-1.8/pcl/common/impl/copy_point.hpp
 pcl/point_types.h
 -
@@ -1758,6 +1810,8 @@ pcl/common/copy_point.h
 pcl/point_types.h
 -
 
+/usr/local/include/pcl-1.8/pcl/common/impl/transforms.hpp
+
 /usr/local/include/pcl-1.8/pcl/common/io.h
 string
 -
@@ -1776,6 +1830,28 @@ pcl/common/impl/io.hpp
 
 /usr/local/include/pcl-1.8/pcl/common/point_tests.h
 Eigen/src/StlSupport/details.h
+-
+
+/usr/local/include/pcl-1.8/pcl/common/transforms.h
+pcl/point_cloud.h
+-
+pcl/point_types.h
+-
+pcl/common/centroid.h
+-
+pcl/common/eigen.h
+-
+pcl/PointIndices.h
+-
+pcl/common/impl/transforms.hpp
+-
+
+/usr/local/include/pcl-1.8/pcl/console/parse.h
+vector
+-
+sstream
+-
+pcl/pcl_macros.h
 -
 
 /usr/local/include/pcl-1.8/pcl/console/print.h
@@ -1856,6 +1932,10 @@ pcl/common/eigen.h
 pcl/point_cloud.h
 -
 pcl/ModelCoefficients.h
+-
+
+/usr/local/include/pcl-1.8/pcl/impl/cloud_iterator.hpp
+pcl/cloud_iterator.h
 -
 
 /usr/local/include/pcl-1.8/pcl/impl/pcl_base.hpp
@@ -1976,10 +2056,6 @@ sys/mman.h
 pcl/io/lzf.h
 -
 
-/usr/local/include/pcl-1.8/pcl/io/io.h
-pcl/common/io.h
--
-
 /usr/local/include/pcl-1.8/pcl/io/lzf.h
 pcl/pcl_macros.h
 -
@@ -1990,6 +2066,58 @@ pcl/point_cloud.h
 pcl/io/file_io.h
 -
 pcl/io/impl/pcd_io.hpp
+-
+
+/usr/local/include/pcl-1.8/pcl/io/ply/byte_order.h
+boost/detail/endian.hpp
+-
+
+/usr/local/include/pcl-1.8/pcl/io/ply/io_operators.h
+istream
+-
+limits
+-
+ostream
+-
+
+/usr/local/include/pcl-1.8/pcl/io/ply/ply.h
+pcl/io/boost.h
+-
+pcl/io/ply/byte_order.h
+-
+
+/usr/local/include/pcl-1.8/pcl/io/ply/ply_parser.h
+fstream
+-
+iostream
+-
+istream
+-
+sstream
+-
+string
+-
+vector
+-
+pcl/io/boost.h
+-
+pcl/io/ply/ply.h
+-
+pcl/io/ply/io_operators.h
+-
+pcl/pcl_macros.h
+-
+
+/usr/local/include/pcl-1.8/pcl/io/ply_io.h
+pcl/io/boost.h
+-
+pcl/io/file_io.h
+-
+pcl/io/ply/ply_parser.h
+-
+pcl/PolygonMesh.h
+-
+sstream
 -
 
 /usr/local/include/pcl-1.8/pcl/pcl_base.h
@@ -2146,12 +2274,6 @@ boost/foreach.hpp
 boost/date_time/posix_time/posix_time.hpp
 -
 boost/filesystem.hpp
--
-
-/usr/local/include/pcl-1.8/pcl/visualization/cloud_viewer.h
-pcl/visualization/pcl_visualizer.h
--
-string
 -
 
 /usr/local/include/pcl-1.8/pcl/visualization/common/actor_map.h
